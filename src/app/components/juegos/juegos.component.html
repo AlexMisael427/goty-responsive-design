@@ -1,0 +1,38 @@
+<style>
+  :host ::ng-deep .p-togglebutton.p-button:not(.p-disabled):not(.p-highlight):hover {
+    background: #3ea937;
+    color: white;
+  }
+
+  :host ::ng-deep .p-togglebutton.p-button.p-highlight {
+    background: #9e65dc;
+    color: white;
+  }
+
+  :host ::ng-deep  .p-togglebutton.p-button {
+    background: #15b8f7;
+    color: white;
+  }
+</style>
+
+<br>
+<div >
+    <h2>List Of Games Nominated</h2>
+</div>
+<br>
+
+  <div *ngFor="let game of games" class="concentrado">
+    <p-card header={{game.name}} subheader={{game.developer}} styleClass="p-card-shadow">
+      <ng-template pTemplate="header">
+        <img alt={{game.name}} src={{game.url}}>
+      </ng-template>
+      <p>{{game.description | slice :0 :150}}
+        {{(game.description.length > 150 )? ' ...':'' }} </p>
+      <ng-template pTemplate="footer">
+        <p-button label="View Details"  icon="pi pi-eye"   [routerLink]="['/Game-Detail', game.id ]"></p-button>
+      </ng-template>
+    </p-card>
+  </div>
+
+
+

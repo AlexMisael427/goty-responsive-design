@@ -1,0 +1,15 @@
+.container {
+  text-align: justify;
+  text-justify: inter-word;
+
+}
+
+.seccion{
+  margin-left: 5%;
+  text-align: center;
+  display: inline;
+}
+
+#imagenInfo{
+  width: 90%;
+}

@@ -1,0 +1,28 @@
+
+<br>
+<h1><strong>GAME OF THE YEAR</strong></h1>
+<br>
+
+<section class="displayInfo">
+  <p-galleria [(value)]="games" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '520px'}" [numVisible]="5" 
+  [autoPlay]="true" [transitionInterval]="500" [(activeIndex)]="activeIndex"> 
+      <ng-template pTemplate="item" let-item>
+          <img [src]="item.url" style="width: 100%;" [alt]="item.name" />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+          <div class="grid grid-nogutter justify-content-center">
+              <img [src]="item.url2" [alt]="item.name"  style="width: 50%;"/>
+          </div>
+      </ng-template>
+  </p-galleria>
+  
+</section>
+
+
+
+
+
+
+
+
+
